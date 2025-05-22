@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rusty is a blank</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f6f8;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      background: white;
+      padding: 2rem 3rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.09);
+      text-align: center;
+    }
+    .output {
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+      min-height: 2.2em;
+    }
+    select {
+      font-size: 1.2rem;
+      padding: 0.4rem 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid #aaa;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="output" id="output">Rusty is a <span id="blank">______</span>.</div>
+    <select id="dropdown">
+      <option value="">Select an answer…</option>
+      <!-- 15 identical options -->
+      <option value="Cunt">Cunt</option>
+      <option value="Cunt">Cunt</option>
+      <option value="Cunt">Cunt</option>
+      <option value="Cunt">Cunt</option>
+      <option value="Cunt">Cunt</option>
+      <option value="Cunt">Cunt</option>
+      <option value="Cunt">Cunt</option>
+      <option value="Cunt">Cunt</option>
+      <option value="Cunt">Cunt</option>
+      <option value="Cunt">Cunt</option>
+      <option value="Cunt">Cunt</option>
+      <option value="Cunt">Cunt</option>
+      <option value="Cunt">Cunt</option>
+      <option value="Cunt">Cunt</option>
+      <option value="Cunt">Cunt</option>
+    </select>
+  </div>
+  <script>
+    const dropdown = document.getElementById('dropdown');
+    const blank = document.getElementById('blank');
+    dropdown.addEventListener('change', function() {
+      if (dropdown.value) {
+        blank.textContent = dropdown.value;
+      } else {
+        blank.textContent = "______";
+      }
+    });
+  </script>
+</body>
+</html>
